@@ -1,4 +1,12 @@
-name: AdvancementsPlus
+name: AdvancementPlus
 version: '1.0'
-main: com.yovez.advancementsPlus.AdvancementsPlus
+main: com.yovez.advancementPlus.AdvancementPlus
 api-version: '1.21'
+author: Yovez
+commands:
+  advancementplus:
+    permission: advancementplus.admin
+    permission-message: "&cYou don't have permission to do that."
+    aliases:
+      - ap
+      - advanceplus

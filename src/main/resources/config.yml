@@ -1,0 +1,25 @@
+AdvancementPlus:
+  rewards:
+  # Each line represents a command to send from console
+  # Supports color codes with the '&' symbol
+  # Available placeholders:
+  # %player% - The player that made the advancement
+  # %totalCompleted% - The player's total number of completed advancements
+  # %totalRemaining% - The player's total remaining advancements
+  # %totalAdvancements% - The total number of advancements for the server.
+  # %advancement% - The advancement name, including the hover
+  # %advancementNoFormat% - The advancement name, without color or hover text
+  # ap-broadcast is the prefix for the internal broadcast, this is to keep a clean and uniform broadcast rather than
+  # relying on another broadcast command for a different plugin, you of course can change to this to
+  # your own broadcast command
+    # Specific to advancements - The green advancements
+    advancement:
+      - 'ap-broadcast &a%player% &fhas made the advancement &a[%advancement%&a]&f - &e[&7%totalCompleted%&8/&7%totalAdvancements%&e]'
+    # Specific to challenges - The dark purple advancements
+    challenge:
+      - 'ap-broadcast &a%player% &fhas completed the challenge &a[%advancement%&a]&f - &e[&7%totalCompleted%&8/&7%totalAdvancements%&e]'
+    # Specific to the completion of all advancements and challenges
+    # These rewards execute in addition to the advancement/challenge rewards.
+    # The hover action for %advancement% does not work in these rewards.
+    completion:
+      - 'ap-broadcast &a%player% &fhas completed ALL &aAdvancements &fand &5Challenges&f!'
