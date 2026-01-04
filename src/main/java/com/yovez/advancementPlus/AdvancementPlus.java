@@ -31,7 +31,7 @@ public final class AdvancementPlus extends JavaPlugin {
             }
             if (args[0].equalsIgnoreCase("reload")) {
                 reloadConfig();
-                sender.sendMessage("§aReloaded AdvancementsPlus config file.");
+                sender.sendMessage("§aReloaded AdvancementPlus config file.");
                 return true;
             }
             if (args[0].equalsIgnoreCase("test")) {
@@ -69,7 +69,7 @@ public final class AdvancementPlus extends JavaPlugin {
                     placeholders.put("%advancement%", advancementDisplay.getType().getColor() + advancementDisplay.getTitle());
                     placeholders.put("%advancementDescription%", advancementDisplay.getType().getColor() + advancement.getDisplay().getDescription());
                     placeholders.put("%advancementNoFormat%", advancementDisplay.getTitle());
-                    List<String> commands = getConfig().getStringList("AdvancementPlus." + (isChallenge ? "challenge" : "advancement") + "-rewards");
+                    List<String> commands = getConfig().getStringList("AdvancementPlus.rewards" + (isChallenge ? "challenge" : "advancement"));
                     if (!commands.isEmpty()) {
                         for (String command : commands) {
                             if (command.startsWith("ap-broadcast")) {
@@ -94,7 +94,7 @@ public final class AdvancementPlus extends JavaPlugin {
             }
             return true;
         });
-        getCommand("advancementsplus").setTabCompleter((sender, cmd, label, args) -> {
+        getCommand("advancementplus").setTabCompleter((sender, cmd, label, args) -> {
             if (args.length == 1) {
                 return Arrays.asList("help", "reload", "test");
             }
