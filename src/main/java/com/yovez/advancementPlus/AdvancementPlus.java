@@ -69,7 +69,7 @@ public final class AdvancementPlus extends JavaPlugin {
                     placeholders.put("%advancement%", advancementDisplay.getType().getColor() + advancementDisplay.getTitle());
                     placeholders.put("%advancementDescription%", advancementDisplay.getType().getColor() + advancement.getDisplay().getDescription());
                     placeholders.put("%advancementNoFormat%", advancementDisplay.getTitle());
-                    List<String> commands = getConfig().getStringList("AdvancementPlus.rewards" + (isChallenge ? "challenge" : "advancement"));
+                    List<String> commands = getConfig().getStringList("AdvancementPlus.rewards." + (isChallenge ? "challenge" : "advancement"));
                     if (!commands.isEmpty()) {
                         for (String command : commands) {
                             if (command.startsWith("ap-broadcast")) {

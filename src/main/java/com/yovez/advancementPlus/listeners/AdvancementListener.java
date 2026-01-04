@@ -39,7 +39,7 @@ public class AdvancementListener implements Listener {
             placeholders.put("%advancement%", advancementDisplay.getType().getColor() + advancementDisplay.getTitle());
             placeholders.put("%advancementDescription%", advancementDisplay.getType().getColor() + advancement.getDisplay().getDescription());
             placeholders.put("%advancementNoFormat%", advancementDisplay.getTitle());
-            List<String> commands = plugin.getConfig().getStringList("AdvancementPlus.rewards" + (isChallenge ? "challenge" : "advancement"));
+            List<String> commands = plugin.getConfig().getStringList("AdvancementPlus.rewards." + (isChallenge ? "challenge" : "advancement"));
             if (!commands.isEmpty()) {
                 for (String command : commands) {
                     if (command.startsWith("ap-broadcast")) {
